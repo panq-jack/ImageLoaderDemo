@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ee666666">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_centerVertical="true"
+            android:textStyle="normal"
+            android:textSize="22dp"
+            android:textColor="@android:color/white"
+            android:text="图片"
+            />
+
+        <Button
+            android:id="@+id/iv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:text="发送"
+            android:background="@drawable/shape_bg_btn"
+            />
+    </RelativeLayout>
+
+
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:clipToPadding="true"
+        android:paddingBottom="50dp"
+        android:numColumns="4"
+        android:cacheColorHint="@android:color/transparent"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ee666666"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_dirname"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:clickable="true"
+            tools:text="图片     ->"/>
+
+        <TextView
+            android:id="@+id/tv_dircount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20dp"
+
+            android:textColor="@android:color/white"
+            tools:text="共100张"/>
+
+        <TextView
+            android:id="@+id/tv_peek"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20dp"
+
+            android:textColor="@android:color/white"
+            android:text="预览"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
